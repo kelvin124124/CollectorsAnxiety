@@ -16,6 +16,8 @@ public class BardingEntry : Unlockable<BuddyEquip>
 
     public override Item? UnlockItem { get; }
 
+    public override string SourceCategory => "Barding";
+
     public override uint SortKey => LuminaEntry.Order;
 
     public override bool IsUnlocked()

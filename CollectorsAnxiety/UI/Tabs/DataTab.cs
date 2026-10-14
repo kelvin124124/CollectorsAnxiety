@@ -86,6 +86,7 @@ public class DataTab<TEntry, TSheet> : IDataTab where TEntry : Unlockable<TSheet
     public required IChatGui ChatGui { protected get; init; }
     public required IDalamudPluginInterface PluginInterface { protected get; init; }
     public required ITextureProvider TextureProvider { protected get; init; }
+    public required ItemSources ItemSources { protected get; init; }
 
     protected DataTab()
     {
@@ -319,6 +320,11 @@ public class DataTab<TEntry, TSheet> : IDataTab where TEntry : Unlockable<TSheet
         if (unlockItem.IsMarketBoardEligible())
         {
             ImGuiUtil.HoverMarker(FontAwesomeIcon.Coins, "Available from the Market Board");
+        }
+
+        if (ItemSources.IsEnabled && ItemSources.GetTooltip<TSheet>(entry) is { } sourceTooltip)
+        {
+            ImGuiUtil.HoverMarker(FontAwesomeIcon.MapMarkedAlt, sourceTooltip);
         }
     }
 

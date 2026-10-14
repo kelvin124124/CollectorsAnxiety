@@ -14,6 +14,8 @@ public class EmoteEntry : Unlockable<Emote>
 
     public override Item? UnlockItem { get; }
 
+    public override string SourceCategory => "Emote";
+
     public override string Name => LuminaEntry.Name.ToDalamudString().ToTitleCase();
 
     public override uint? IconId => LuminaEntry.Icon;

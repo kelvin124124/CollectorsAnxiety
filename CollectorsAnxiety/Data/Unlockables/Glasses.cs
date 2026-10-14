@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using CollectorsAnxiety.Game;
 using Lumina.Excel.Sheets;
@@ -20,6 +21,10 @@ public class GlassesEntry : Unlockable<GlassesStyle>
     public override uint? IconId => (uint)LuminaEntry.Icon;
 
     public override Item? UnlockItem { get; }
+
+    public override string SourceCategory => "Glasses";
+
+    public override IEnumerable<uint> SourceIds => LuminaEntry.Glasses.Select(g => g.RowId);
 
     public override uint SortKey => LuminaEntry.Order;
 

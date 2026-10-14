@@ -7,4 +7,7 @@
         <PackageReference Include="DalaMock.Host" Version="2.2.5"/>
         <PackageReference Include="DalaMock.Shared" Version="2.2.6"/>
     </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\ItemSourcesTC.json" LogicalName="CollectorsAnxiety.Resources.ItemSourcesTC.json" WithCulture="false"/>
+    </ItemGroup>
 </Project>

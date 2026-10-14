@@ -105,6 +105,7 @@ public sealed class CollectorsAnxietyPlugin : HostedPlugin
 
         // Misc
         containerBuilder.RegisterType<UnlockItemCache>().AsSelf().SingleInstance();
+        containerBuilder.RegisterType<ItemSources>().AsSelf().SingleInstance();
         containerBuilder.RegisterType<GameState>().AsSelf().SingleInstance();
         containerBuilder.RegisterType<UniqueMusicMounts>().SingleInstance();
         containerBuilder.Register(c => c.Resolve<IDataManager>().GameData).SingleInstance();

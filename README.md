@@ -28,6 +28,13 @@ This view also will apply parse coloring to each category name, to give players 
 progress as well as to encourage just a little bit of toxicity, as a treat. Collection data is not
 uploaded to any server, and collection parses are relative to total items collected.
 
+### Item Sources (Traditional Chinese Server)
+
+On the Traditional Chinese (繁中) server, a map icon appears next to each entry. Hover over it to see where the entry
+comes from. The data comes from [FFXIV 繁體中文收藏查詢站][collection-tc]. For entries that site doesn't cover, the
+English data from [FFXIV Collect][ffxivcollect] is shown instead. Players on other servers can turn this on from the
+Settings tab. To refresh the bundled data, run `python3 tools/generate_item_sources.py`.
+
 ### Installing the Plugin
 
 To install Collector's Anxiety, simply add it through the Dalamud Plugin Installer. Note that, at
@@ -37,6 +44,8 @@ be made available to all users.
 
 
 [ffxiv]: https://www.finalfantasyxiv.com
+[collection-tc]: https://cycleapple.github.io/ffxiv-collection-tc/
+[ffxivcollect]: https://ffxivcollect.com/
 [pointcrow]: https://www.youtube.com/watch?v=NSNFwHUXVqc
 [dalamudfaq-test]: https://goatcorp.github.io/faq/dalamud_troubleshooting.html#q-how-do-i-enable-plugin-test-builds
 [dalamudfaq-tos]: https://goatcorp.github.io/faq/xl_troubleshooting#q-are-xivlauncher-dalamud-and-dalamud-plugins-safe-to-use

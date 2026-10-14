@@ -18,6 +18,8 @@ public class OrnamentEntry : Unlockable<Ornament>
 
     public override Item? UnlockItem { get; }
 
+    public override string SourceCategory => "Ornament";
+
     public override uint SortKey => (uint)LuminaEntry.Order;
 
     public override bool IsUnlocked()

@@ -16,6 +16,8 @@ public class MinionEntry : Unlockable<Companion>
 
     public override Item? UnlockItem { get; }
 
+    public override string SourceCategory => "Minion";
+
     public override uint? IconId => LuminaEntry.Icon;
 
     public override uint SortKey => LuminaEntry.Order;

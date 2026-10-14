@@ -19,6 +19,8 @@ public class MountEntry : Unlockable<Mount>
 
     public override Item? UnlockItem { get; }
 
+    public override string SourceCategory => "Mount";
+
     public override string Name => LuminaEntry.Singular.ToDalamudString().ToTitleCase();
 
     public override uint? IconId => LuminaEntry.Icon;

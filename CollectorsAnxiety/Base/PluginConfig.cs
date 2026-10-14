@@ -5,6 +5,16 @@ using Dalamud.Configuration;
 
 namespace CollectorsAnxiety.Base;
 
+public enum ItemSourceMode
+{
+    /// <summary>
+    /// Show item sources only when playing on the Traditional Chinese server.
+    /// </summary>
+    Auto,
+    Always,
+    Never,
+}
+
 public class PluginConfig : IPluginConfiguration
 {
     public int Version { get; set; } = 1;
@@ -13,6 +23,7 @@ public class PluginConfig : IPluginConfiguration
 
     public bool HideSpoilers { get; set; } = true;
     public bool CountHiddenItemsInOverview { get; set; } = false;
+    public ItemSourceMode ItemSourceMode { get; set; } = ItemSourceMode.Auto;
 
     public bool IsItemHidden<T>(T entry) where T : IUnlockable
     {

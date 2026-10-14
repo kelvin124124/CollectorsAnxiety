@@ -20,6 +20,8 @@ public class OrchestrionEntry : Unlockable<Orchestrion>
 
     public override Item? UnlockItem { get; }
 
+    public override string SourceCategory => "Orchestrion";
+
     public string? Category { get; }
 
     public override bool IsUnlocked()
